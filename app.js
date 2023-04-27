@@ -1,4 +1,4 @@
-const form:wq  = document.querySelector(".card-details")
+const form =  document.querySelector(".card-details")
 const button = document.querySelector(".submit-btn");
  const alert = document.querySelector(".alert")
  const details = document.getElementById("details")
