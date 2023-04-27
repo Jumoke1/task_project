@@ -1,0 +1,101 @@
+CTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="style.css" />
+ 
+    <!-- Feel free to remove these styles or customise in your own stylesheet <<👍 -->
+ <!--- <style> 
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>  --->
+</head>
+<body>
+
+  <!--0000 0000 0000 0000 
+  Jane Appleseed
+  00/00
+
+  000 
+
+  Cardholder Name
+  e.g. Jane Appleseed -->
+  <section class="section-center">
+    <!-- form -->
+    <form class="card-details">
+        <p class="alert"></p>
+        <h4>CARDHOLDER NAME</h4>
+        <div class="form-control">
+          <input type="text" id="details" placeholder=" Jane Appleseed" />
+          
+        </div>
+  
+        <p class="alert"></p>
+        <h4>CARD NUMBER</h4>
+        <div class="form-control">
+          <input type="text" id="details" placeholder="1234 5678 9123 0000" />
+
+        </div>
+
+    <br> 
+        <div class="form-container">
+            <div class="form-control">
+              <label for="mm"><h4>Exp. Date (MM/YY)</h4></label>
+              
+            </div>
+            <div class="form-control">
+              <label for="yy"></label>
+              
+            </div>
+            <label for="cvc"><h4>CVC</h4></label>
+            <div class="form-control">
+              <br> <br> 
+            </div>
+          <br>
+            <input type="text" maxlength="2" size="2" id="details" placeholder="MM">
+            <input type="text" maxlength="2" size="2" id="details" placeholder="YY">
+            <input type="text" maxlength="3" size="3" id="details" placeholder="e.g. 123">  
+          </div>
+
+
+          <button type="submit" class="submit-btn">confirm</button>
+
+
+    </form>
+
+
+  <!--- Card Number
+  e.g. 1234 5678 9123 0000
+
+  Exp. Date (MM/YY)
+  MM 
+  YY
+
+  CVC
+  e.g. 123
+
+  Confirm
+--->
+  <!-- Completed state start -->
+
+  <!-- Thank you!
+  We've added your card details
+  Continue --->
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Jums</a>.
+  </div>
+</body>
+</html>
+
