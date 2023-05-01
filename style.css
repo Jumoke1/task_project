@@ -1,3 +1,4 @@
+
 /*
 =============== 
 Fonts
@@ -59,6 +60,226 @@ Global Styles
 ===============
 */
 
+/* front and back card details */
+.cards-front-back{
+  background-image: url(./Image/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width:28rem;
+  margin-right: 5rem;
+  display:flex;
+  flex-direction: column;
+}
+.front-card-details
+{
+  position: relative;
+  width: 17%;
+  min-width:12rem;
+  max-width:15rem;
+  margin-left: 10rem;
+  padding-top: 10rem;
+  z-index: 99;
+}
+
+.front-card-details{
+  color: var(--White);
+}
+.front-card-img{
+  height: 17w;
+  min-height: 12rem;
+  max-height: 15rem;
+  position: relative;
+}
+.front-card-info{
+  position: absolute;
+  top: 11rem;
+  left:1rem;
+  display: grid;
+  width: 140%;
+  height: 50%;
+  align-items: center;
+  grid-template-columns: 80% 7% 7% 7%;
+  grid-template-rows: 50% 25% 25%;
+}
+
+.front-card-logo{
+  height: 2.5rem;
+  grid-column:1/5;
+  align-self: start;
+
+}
+.card-number-info{
+  grid-column: 1/5;
+  justify-self:center;
+  font-size: min(2vw, 1.1rem);
+  letter-spacing:0.2rem;
+}
+.slash{
+  justify-self: center;
+}
+.back-card-info{
+  height:17vw;
+  min-height: 12rem;
+  max-height:15rem;
+  position: relative;
+}
+.card-cvc{
+  position: relative;
+  bottom: 51%;
+  left: 115%;
+  width: 3rem;
+}
+/*end of front and back details */
+
+/* form center -*/
+.section-center
+{
+  height: 100%;
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+ .form-control{
+  padding-top: 10rem;
+  width: 40%;
+ }
+
+ .form-control form{
+  height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: end;
+    grid-template-columns: 25% 25% 50%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: .5rem;
+    grid-template-areas: 
+    'card-name      card-name      card-name'
+    'name-input     name-input     name-input'
+    'err-name       err-name        err-name'
+    'card-number    card-number    card-number'
+    'number-input   number-input   number-input'
+    'err-number     err-number     err-number'
+    'expiration     expiration     cvc'
+    'month          year           cvc-input'
+    'err-month      err-year       err-cvc'
+    'confirm        confirm        confirm'
+    ;
+ }
+ .form-control form label{
+  text-transform: uppercase;
+    color: var(--Very-dark-violet);
+    font-size: .7rem;
+    letter-spacing: .1rem;
+    padding-top: 1rem;
+ }
+
+ .form-control form input [type ='text']
+  {
+  color: var(--Very-dark-violet);
+    font-family: Space Grotesk;
+    font-weight: 500;
+    border: solid 1px var(--Light-grayish-violet);
+    border-radius: .4rem;
+    padding: .5rem;
+    height: 1.5rem;
+ }
+
+ input:focus{
+  outline: none;
+  border-color: var(--Linear-gradient) !important;
+}
+
+input::placeholder{
+  font-family: Space Grotesk;
+}
+
+
+ .form-control form input[type='submit']{
+  color: var(--Light-grayish-violet);
+  background-color: var(--Very-dark-violet);
+  font-size: 1rem;
+  margin-top: 1rem;
+  height: 2rem;
+  border-radius: .4rem;
+  border: none;
+}
+
+.form-control form input[type='submit']:hover{
+  color: var(--Light-grayish-violet);
+  background-color: hsl(278, 94%, 30%);
+  cursor: pointer;
+}  
+.card-name{
+  grid-area: card-name;
+}
+.i-name{
+  grid-area: card-name;
+}
+
+.card-number{
+  grid-area: card-number;
+}
+
+.i-number{
+  grid-area: number-input;
+}
+
+.exp-number{
+  grid-area: expiration;
+}
+
+.i-mm{
+  grid-area: month; 
+}
+.i-yy{
+  grid-area: year;
+}
+.cvc-number{
+  grid-area: cvc;
+}
+.i-cvc{
+  grid-area: cvc-input; 
+}
+
+/*mobile part */
+.section-center{
+  background-image: url(./images/bg-main-mobile.png);
+        height: 50%;
+        margin-right: 0;
+        width: 100%;
+        align-items: start; 
+}
+
+.front-card-details
+{
+  margin-left: 1rem;
+        padding-top: 10rem;
+        min-width: 10rem; 
+}
+.front-card-img{
+  height: 40vw;
+  min-height: 10rem;
+}
+
+
+.front-card-info{
+  top: 11rem;
+  left: 1rem; 
+}
+.back-card-info{
+  position: relative;
+  margin-left: 7rem;
+  top: -26rem;
+} 
+.back-card-img{
+  height: 40vw;
+        min-height: 10rem;
+        max-height: 15rem;
+        position: relative; 
+}
 *,
 ::after,
 ::before {
@@ -73,7 +294,7 @@ body {
   line-height: 1.5;
   font-size: 0.875rem;
 }
-ul {
+/* ul {
   list-style-type: none;
 }
 a {
@@ -81,7 +302,7 @@ a {
 }
 img:not(.logo) {
   width: 100%;
-}
+} 
 img {
   display: block;
 }
@@ -125,7 +346,7 @@ p {
   }
   h4 {
     font-size: 1rem;
-  }
+  } 
   body {
     font-size: 1rem;
   }
@@ -137,10 +358,11 @@ p {
     padding-top: 15px;
     text-transform: capitalize;
   }
-}
+} */
 /*  global classes */
 
-.btn {
+
+/*.btn {
   text-transform: uppercase;
   background: transparent;
   color: var(--clr-black);
@@ -158,6 +380,7 @@ p {
   color: var(--clr-white);
   background: var(--clr-black);
 }
+*/
 /* section */
 .section {
   padding: 5rem 0;
@@ -214,6 +437,7 @@ label {
 Grocery List
 ===============
 */
+
 .section-center {
   background: var(--clr-white);
   border-radius: var(--radius);
@@ -221,6 +445,7 @@ Grocery List
   transition: var(--transition);
   padding: 2rem;
 }
+
 .section-center:hover {
   box-shadow: var(--dark-shadow);
 }
@@ -315,6 +540,8 @@ Grocery List
   letter-spacing: 2px;
   transition: var(--transition);
 }
+
+/*
 .edit-btn,
 .delete-btn {
   background: transparent;
@@ -355,4 +582,4 @@ Grocery List
 .clear-btn:hover {
   color: var(--clr-red-dark);
 }
-
+*/
