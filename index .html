@@ -21,82 +21,93 @@
   </style>  --->
 </head>
 <body>
-  <!--details on the card-->
-<div class="cards-front-back">
-  <div class="front-card-details">
-  <img src="Image/bg-card-front.png"  class="front-card-img" alt="">
-  <div class="front-card-info"> 
-  <img src="Image/card-logo.svg" class="front-card-logo" alt="">
-<p class="card-number-info" id="card-number-info">0000 0000 0000 0000</p>
-<p class="card-name">Jane Appleseed</p>
-<P class="card-month">00</P>
-<p class="slash-line">/</p>
-<p class="card-year">00</p>
-</div>
-</div>
-<div class="back-card-info">
-  <img  class="back-card-img" src="Image/bg-card-back (1).png" alt="">
-    <p class="card-cvc">000</p>
-  </div>
-</div>
-  <!--0000 0000 0000 0000 
-  Jane Appleseed
-  00/00
-
-  000 
-
-  Cardholder Name
-  e.g. Jane Appleseed -->
-  <section class="section-center">
-    <!-- form -->
-    <form class="card-details">
-    <div class="form-control">
-        <p class="alert"></p>
-       <label for="form name" class="card-name">Cardholder</label>
-        <input type="text" id="details" class="i-name" placeholder="Jane Appleseed" />
-          
-        
-  
-        <p class="alert"></p>
-        <label for="form-number" class="card-number">Card number</label>
-          <input type="text" id="details" class="i-number" placeholder="1234 5678 9123 0000" />
-
-            
-              <label for="mm" class="exp-number">Exp. Date (MM/YY)</label>
-              <input type="text" class="i-mm" maxlength="2" size="2" id="details" placeholder="MM">
-              <label for="yy" class="yy-number"></label>
-              <input type="text" class="i-yy" maxlength="2" size="2" id="details" placeholder="YY">
-
-            <label for="cvc" class="cvc-number">CVC</label>
-            <input type="text" class="i-cvc" maxlength="3" size="3" id="details" placeholder="e.g. 123">  
-      </div>
+  <main>
+  <!--display part-->
+   <div class="container">
+    <div class="first-section">
+      <div class="card-detail">
+        <div class="front-card-part">
+          <img src="./image/card-logo.svg" class="card-logo" alt="card-logo">
+          <div class="card-container">
+            <img src="./Image/bg-card-front.png" alt="front-card"/>
+            <h1 id="number">0000 0000 0000 0000</h1>
+            <span class="carddisplay-info" id="display-name">Jane Appleseed</span>
+            <span class="display-date">
+                <span id= "month">00</span>
+                <span id="year">00</span>
+              </span>
+            </div>
           </div>
+        </div>
+
+            <div class="back-card-part">
+              <img src="./Image/bg-card-back (1).png" alt="back-card">
+          <span id="cvc">000</span>
+      </div>
+    </div>
+   </div>
+
+<!--form part-->
+   <div class="second-section"> 
+    <form action="" class="form">
+      <p class="alert"></p>
+      <div class="grid_1">
+      <div class="form-part">
+        <p id="error"></p>
+        <label for="">Cardholder Name</label>
+      <input type="text" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+      minlength="16"
+      maxlength="16"   id="details" placeholder="eg Jane Appleseed" class="card-name" required/>
+      </div>
+    </div>
+
+      <div class="grid_2">
+        <label for="">Card Number</label>
+        <input type="number"id="details" placeholder="eg 1234 5678 9012 3456" class="card-number">
+      </div>
+
+      <div class="card-month-time-info">
+        <div class="card-date">
+        
+          <label for="">Exp. Date(MM/YY)</label>
+          <div class="two-input">
+            <div>
+            <input type="number" id="details" placeholder="MM"  class="card-month" maxlength="02">
+            </div>
  
-          <button type="submit" class="submit-btn">confirm</button>
+            <div>
+
+              <input type="number" id="details" placeholder="YY" class="card-year" maxlength="02">
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-4">
+          <label for="">CVC</label>
+          <input type="number" id="details" placeholder="eg 123" class="card-cvc">
+        </div>
+      </div>
+
+      <!--button-->
+      <button class="submit_btn" type="submit">Confirm</button>
     </form>
 
+    <!--display thank u message-->
+    <div class="thank-you hidden">
+      <img src="./Image/icon-complete.svg" alt="">
+       <h1>Thank you!</h1>
+       <p>We've added your card details</p>
+       <button  class="btn">continue</button>
+    </div> 
+   </div>
+  </main>
 
-  <!--- Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM 
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
---->
-  <!-- Completed state start -->
-
-  <!-- Thank you!
-  We've added your card details
-  Continue --->
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Jums</a>.
+
+    <script src="app.js"></script>
   </div>
 </body>
 </html>
