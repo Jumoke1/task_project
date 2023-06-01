@@ -231,7 +231,7 @@ color: var(--Dark-grayish-violet);
 
 }
 .thank-you button{
-    color:var(--White);
+    color:var(--white);
     width:100%;
     border-radius:6px;
     padding: 1 rem;

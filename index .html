@@ -55,15 +55,15 @@
       <div class="form-part">
         <p id="error"></p>
         <label for="">Cardholder Name</label>
-      <input type="text" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-      minlength="16"
-      maxlength="16"   id="details" placeholder="eg Jane Appleseed" class="card-name" required/>
+      <input type="text" id="details" placeholder="eg Jane Appleseed" class="card-name" >
       </div>
     </div>
 
       <div class="grid_2">
         <label for="">Card Number</label>
-        <input type="number"id="details" placeholder="eg 1234 5678 9012 3456" class="card-number">
+        <input type="number" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+        minlength="16"
+        maxlength="16" id="details" placeholder="eg 1234 5678 9012 3456" class="card-number">
       </div>
 
       <div class="card-month-time-info">
@@ -72,19 +72,25 @@
           <label for="">Exp. Date(MM/YY)</label>
           <div class="two-input">
             <div>
-            <input type="number" id="details" placeholder="MM"  class="card-month" maxlength="02">
+            <input type="number" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            mimlength="1"
+            maxlength="2"
+            id="details" placeholder="MM"  class="card-month" maxlength="02">
             </div>
  
             <div>
 
-              <input type="number" id="details" placeholder="YY" class="card-year" maxlength="02">
+              <input type="number" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              mimlength="2"
+              maxlength="2" id="details" placeholder="YY" class="card-year" maxlength="02">
             </div>
           </div>
         </div>
 
         <div class="grid-4">
           <label for="">CVC</label>
-          <input type="number" id="details" placeholder="eg 123" class="card-cvc">
+          <input type="number" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+           maxlength="3" id="details" placeholder="eg 123" class="card-cvc">
         </div>
       </div>
 
